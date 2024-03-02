@@ -2,19 +2,19 @@
     position: relative;
     width: 200px;
     height: 200px;
-    left: 150px;
-    top: 100px
+    left: 25%;
+    top: 200px;
 }
 
 .circle {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 10vh;
+    height: 10vh;
     background-color: gray;
     border-radius: 50%;
-    transform-origin: center;
     text-align: center;
     font-weight: bold;
+    font-size: 5vh;
     vertical-align: right;
 }
 

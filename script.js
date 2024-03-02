@@ -2,19 +2,25 @@
 const cssInput = document.getElementById('cssInput');
 const liveCSS = document.getElementById('liveCSS');
 
+//Correct colors for each circle
+const CIRCLE_COUNT = 6;
+const CORRECT_COLORS = ["rgb(255, 0, 0)", "rgb(255, 165, 0)", "rgb(255, 255, 0)", "rgb(0, 128, 0)", "rgb(0, 0, 255)", "rgb(128, 0, 128)"];
+
+
 // Function to update CSS
 function updateCSS() {
     css = '#colors {' + cssInput.value + '}';
     liveCSS.textContent = css
 }
 
+
+// Generate the circles
 function loadCircles() {
     const container = document.getElementById('colors');
-    const circleCount = 6;
-    const radius = 60;
-    const angleIncrement = 360 / circleCount;
+    const radius = 100;
+    const angleIncrement = 360 / CIRCLE_COUNT;
 
-    for (let i = 0; i < circleCount; i++) {
+    for (let i = 0; i < CIRCLE_COUNT; i++) {
         index = i + 1;
         const circle = document.createElement('div');
         circle.classList.add('circle');
@@ -25,9 +31,39 @@ function loadCircles() {
     }
 }
 
+// Check if circles match
+function checkCircles() {
+
+    //complete gets set false if any of them are wrong
+    let complete = true;
+
+    for (let i = 0; i < CIRCLE_COUNT; i++) {
+        index = i + 1;
+        circle = document.getElementById("color" + index)
+
+        if (!circle)
+            continue;
+
+        background = window.getComputedStyle(circle).backgroundColor;
+        background = background.toString()
+        console.log(background)
+
+        if (background != CORRECT_COLORS[i]) {
+            complete = false;
+        }
+    }
+
+    if (complete) {
+        alert("You got it!")
+    } else {
+        alert("So close, try again!")
+    }
+}
+
 // Event listener for changes in CSS input
 cssInput.addEventListener('input', updateCSS);
 
-// Initial update
+// Initial update and load
 updateCSS();
 loadCircles();
+
