@@ -1,12 +1,9 @@
-body {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-}
-
-.container {
     position: relative;
     width: 200px;
     height: 200px;
