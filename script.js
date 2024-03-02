@@ -4,12 +4,12 @@ const liveCSS = document.getElementById('liveCSS');
 
 // Function to update CSS
 function updateCSS() {
-    css = '#container {' + cssInput.value + '}';
+    css = '#colors {' + cssInput.value + '}';
     liveCSS.textContent = css
 }
 
 function loadCircles() {
-    const container = document.getElementById('container');
+    const container = document.getElementById('colors');
     const circleCount = 6;
     const radius = 60;
     const angleIncrement = 360 / circleCount;

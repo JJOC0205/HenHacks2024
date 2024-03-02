@@ -1,12 +1,9 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+#colors {
     position: relative;
     width: 200px;
     height: 200px;
+    left: 150px;
+    top: 100px
 }
 
 .circle {
@@ -18,6 +15,6 @@
     transform-origin: center;
     text-align: center;
     font-weight: bold;
-    vertical-align: middle;
+    vertical-align: right;
 }
 
