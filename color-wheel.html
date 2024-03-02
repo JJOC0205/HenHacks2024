@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Wheel</title>
-    <script src="/color-wheel.js" type="text/javascript" defer></script>
-    <script src="/live-editor.js" type="text/javascript" defer></script>
-    <link rel="stylesheet" href="/color-wheel.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Live CSS Editor</title>
 </head>
 <body>
-    <header>
-        <h1>Real-Time HTML/CSS Editor</h1>
-        <h2>Put something between the tags or replace them altogether...</h2>
-     </header>
-     <div class="container grid">
-        <form>
-           <h3>HTML</h3>
-           <textarea id="html" class="edit"></textarea>
-           <h3>CSS</h3>
-           <textarea id="css" class="edit"></textarea>
-        </form>
-     </div>
-     </div>
-     <div id="output-grid" class="output-grid"><iframe id="frame"><div id="frame"></div></iframe></div>
+    <div id="htmlContainer">
+        <!-- Your HTML content goes here -->
+        <p>This is a sample text.</p>
+        <div class="dot" id="dot1"></div>
+    </div>
+    
+    <textarea id="cssInput" placeholder="Enter CSS here..."></textarea>
+
+    <style id="liveCSS"></style>
+
+    <script src="script.js"></script>
 </body>
 </html>
