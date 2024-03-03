@@ -72,6 +72,6 @@ var editor = CodeMirror.fromTextArea(cssInput, {
 cssInput.addEventListener('input', updateCSS);
 
 // Initial update and load
-updateCSS();
+updateCSS(cssInput.value);
 loadCircles();
 
