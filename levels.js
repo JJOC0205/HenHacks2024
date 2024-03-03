@@ -94,7 +94,20 @@ animation-name: stretchDown;
 
 LEVEL_THREE_TITLE = "Lesson 3 - Sandbox"
 
-LEVEL_THREE_CSS = ""
+LEVEL_THREE_CSS = `#color1 {
+  background-color: red;
+}
+#color2 {
+  background-color:          
+}
+#color3 {
+}
+#color4 {
+}
+#color5 {
+}
+#color6 {
+}`
 
 LEVEL_THREE_DESC = `You've worked hard, now it's time to use your new skills to play however you'd like! 
 To learn more about all the amazing things you can do with CSS, check out our help tab for educational resources.

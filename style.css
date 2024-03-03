@@ -48,3 +48,14 @@
         width:200px;
     }
 }
+@keyframes changeColor{
+    0%{
+        background-color: "green"
+    }
+    50%{
+
+    }
+    100%{
+
+    }
+}
