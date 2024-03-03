@@ -86,10 +86,10 @@ function colorMixer(color1, color2){
     else if ((color1.toString().localeCompare("rgb(128, 0, 128)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(128, 0, 128)") === 0 || color2.toString().localeCompare("rgb(255, 255, 0)") === 0)){
         color7.style.backgroundColor = "brown";
     }
-    else if ((color1.toString().localeCompare("rgb(0, 128, 0)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0) || color2.toString().localeCompare("rgb(255, 255, 0)") === 0){
+    else if ((color1.toString().localeCompare("rgb(0, 128, 0)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(255, 255, 0)") === 0)){
         color7.style.backgroundColor = "yellowgreen";
     }
-    else if ((color1.toString().localeCompare("rgb(0, 128 0)") === 0 || color1.toString().localeCompare("rgb(0, 0, 255)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0) || color2.toString().localeCompare("rgb(0, 0, 255)") === 0){
+    else if ((color1.toString().localeCompare("rgb(0, 128 0)") === 0 || color1.toString().localeCompare("rgb(0, 0, 255)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(0, 0, 255)") === 0)){
         color7.style.backgroundColor = "teal";
     }
     else if ((color1.toString().localeCompare("rgb(0, 128, 0)") === 0 || color1.toString().localeCompare("rgb(128, 0, 128)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(128, 0, 128)") === 0)){

@@ -1,41 +1,41 @@
 #colors {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    left: 22vw;
-    top: 200px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  left: 22vw;
+  top: 200px;
 }
 
 .circle {
-    position: absolute;
-    width: 10vh;
-    height: 10vh;
-    background-color: gray;
-    border-radius: 50%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 5vh;
-    vertical-align: right;
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  background-color: gray;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 5vh;
+  vertical-align: right;
 }
 
 .CodeMirror {
-    height: 56vh !important;
-    border-radius: .25rem !important;
+  height: 56vh !important;
+  border-radius: 0.25rem !important;
 }
 
 #color7 {
-    
 }
-@keyframes stretchDown{
-    0%{
-        height:200px;
-    }
-    50%{
-        height: 300px;
-    }
-    100%{
-        height:200px;
-    }
+
+@keyframes stretchDown {
+  0% {
+    height: 200px;
+  }
+  50% {
+    height: 300px;
+  }
+  100% {
+    height: 200px;
+  }
 }
 @keyframes stretchOut{
     0%{
@@ -68,4 +68,14 @@
     100% {
         transform: rotate(-10deg);
     }
+@keyframes stretchOut {
+  0% {
+    width: 200px;
+  }
+  50% {
+    width: 300px;
+  }
+  100% {
+    width: 200px;
+  }
 }
