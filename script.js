@@ -5,7 +5,7 @@ const liveCSS = document.getElementById('liveCSS');
 //Correct colors for each circle
 const CIRCLE_COUNT = 6;
 const CORRECT_COLORS = ["rgb(255, 0, 0)", "rgb(255, 165, 0)", "rgb(255, 255, 0)", "rgb(0, 128, 0)", "rgb(0, 0, 255)", "rgb(128, 0, 128)"];
-
+const CORRECT_COLORS2 = ["rgb(0, 128, 0)", "rgb(0, 0, 255)", "rgb(128, 0, 128)", "rgb(255, 0, 0)", "rgb(255, 165, 0)", "rgb(255, 255, 0)"]
 
 // Function to update CSS
 function updateCSS(input) {
@@ -121,17 +121,30 @@ function checkCircles() {
             continue;
 
         background = window.getComputedStyle(circle).backgroundColor;
-        background = background.toString()
+        background = background.toString();
         console.log(background)
 
-        if (background != CORRECT_COLORS[i]) {
-            complete = false;
+        text = window.getComputedStyle(circle).color;
+        text = text.toString();
+        console.log(window.location.toString())
+        if (currLevel == 1){
+            if (background != CORRECT_COLORS[i]) {
+                complete = false;
+            }
+        } else if (currLevel == 2){
+            if (text != CORRECT_COLORS2[i]) {
+                complete = false;
+            }
         }
     }
 
-    if (complete) {
+    if (complete && currLevel != 3) {
         alert("You got it!")
-    } else {
+    } 
+    else if(currLevel == 3){
+        alert("Sandbox mode, no incorrect answers here!");
+    }
+    else {
         alert("So close, try again!")
     }
 }

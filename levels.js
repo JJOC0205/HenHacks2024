@@ -12,7 +12,7 @@ function setLevel(id) {
 const level = document.getElementById('levelname');
 const desc = document.getElementById('description');
 
-
+let currLevel = 0;
 /*
     LEVEL ONE
 */
@@ -40,7 +40,7 @@ going to fill a color wheel using CSS. The first color, red, is done for you. <b
 <b>Primary Colors:</b> Red, Yellow, and Blue are the first group of colors by which all other
 colors on the color wheel are made from.
 <br /><br />
-<b>Secondary Colors:</b> Orange, Green, and Violet (Purple) are made by mixing two primary colors together.
+<b>Secondary Colors:</b> Orange, Green, and Violet (for our purposes, use Purple) are made by mixing two primary colors together.
 <br /><br />
 <b>Tertiary Colors:</b> Red-Orange, Green-Yellow, etc. are mixed from primary and secondary colors.
 Click on two colors to see their combination in the center circle. Click again to deselect.
@@ -123,16 +123,19 @@ function resetLevel(id) {
             editorText = LEVEL_ONE_CSS
             description = LEVEL_ONE_DESC
             title = LEVEL_ONE_TITLE
+            currLevel = 1;
             break;
         case "2":
             editorText = LEVEL_TWO_CSS
             description = LEVEL_TWO_DESC
             title = LEVEL_TWO_TITLE
+            currLevel = 2;
             break;
         case "3":
           editorText = LEVEL_THREE_CSS
           description = LEVEL_THREE_DESC
           title = LEVEL_THREE_TITLE
+          currLevel = 3;
           break;
         default:
             setLevel(1)

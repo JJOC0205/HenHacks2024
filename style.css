@@ -68,6 +68,7 @@
     100% {
         transform: rotate(-10deg);
     }
+}
 @keyframes stretchOut {
   0% {
     width: 200px;
