@@ -17,7 +17,7 @@ const desc = document.getElementById('description');
     LEVEL ONE
 */
 
-LEVEL_ONE_TITLE = 'Level 1'
+LEVEL_ONE_TITLE = 'Level 1 - Color Wheel'
 
 LEVEL_ONE_CSS = `#color1 {
   background-color: red;
@@ -48,10 +48,11 @@ colors on the color wheel are made from.
     LEVEL TWO
 */
 
-LEVEL_TWO_TITLE = 'Level 2'
+LEVEL_TWO_TITLE = 'Level 2 - Complementary Colors'
 
 LEVEL_TWO_CSS = `#color1 {
   background-color: red;
+  color: green;
 }
 #color2 {
   background-color: orange;
@@ -69,15 +70,14 @@ LEVEL_TWO_CSS = `#color1 {
   background-color: purple;
 }`
 
-LEVEL_TWO_DESC = `Welcome to HELL! For this first level, we are
-going to fill a color wheel using CSS. The first color, red, is done for you.
+LEVEL_TWO_DESC = `Great job! Now, let's change the color of the numbers.
+Use the color property to set the hue of the number to the circle's complementary color. Like before, red is completed for you.
 <br /><br />
-<b>Primary Colors:</b> Red, Yellow, and Blue are the first group of colors by which all other
-colors on the color wheel are made from.
+<b>Complementary Colors:</b> two colors opposite of each other on the color wheel. For example, red and green are complementary.
 <br /><br />
-<b>Secondary Colors:</b> Orange, Green, and Violet (Purple) are made by mixing two primary colors together.
+<b>Analogous Colors:</b> colors next to each other on the color wheel. For example, red and orange are analogous, as are red and purple.
 <br /><br />
-<b>Hint:</b> Go clockwise in ROYGBV order!`
+<b>Hint:</b> `
 
 /*
     --------
