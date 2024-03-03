@@ -122,6 +122,7 @@ function resetLevel(id) {
           editorText = LEVEL_THREE_CSS
           description = LEVEL_THREE_DESC
           title = LEVEL_THREE_TITLE
+          break;
         default:
             setLevel(1)
 
