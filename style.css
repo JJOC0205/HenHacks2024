@@ -1,21 +1,33 @@
 #colors {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  left: 22vw;
-  top: 200px;
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  top: 30vh;
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 20vh;
+  height: 20vh;
 }
 
 .circle {
   position: absolute;
-  width: 10vh;
-  height: 10vh;
+  width: 20vh;
+  height: 20vh;
   background-color: gray;
   border-radius: 50%;
   text-align: center;
   font-weight: bold;
-  font-size: 5vh;
+  font-size: 8vh;
   vertical-align: right;
+  border: none !important;
+}
+
+.circle.selected {
+  border: solid 4pt black !important;
+}
+
+#confetti {
+  position: absolute;
 }
 
 .CodeMirror {
