@@ -35,7 +35,7 @@ LEVEL_ONE_CSS = `#color1 {
 }`
 
 LEVEL_ONE_DESC = `Welcome to Color Guru! For this first level, we are
-going to fill a color wheel using CSS. The first color, red, is done for you.
+going to fill a color wheel using CSS. The first color, red, is done for you. <b>Hint:</b> Go clockwise in ROYGBV order!
 <br /><br />
 <b>Primary Colors:</b> Red, Yellow, and Blue are the first group of colors by which all other
 colors on the color wheel are made from.
@@ -44,8 +44,7 @@ colors on the color wheel are made from.
 <br /><br />
 <b>Tertiary Colors:</b> Red-Orange, Green-Yellow, etc. are mixed from primary and secondary colors.
 Click on two colors to see their combination in the center circle. Click again to deselect.
-<br /><br />
-<b>Hint:</b> Go clockwise in ROYGBV order!`
+`
 
 /*
     LEVEL TWO
@@ -79,6 +78,14 @@ Use the color property to set the hue of the number to the circle's complementar
 <b>Complementary Colors:</b> two colors opposite of each other on the color wheel. For example, red and green are complementary.
 <br /><br />
 <b>Analogous Colors:</b> colors next to each other on the color wheel. For example, red and orange are analogous, as are red and purple.
+<br/><br/>
+For a fun surprise, use these animations inside the circles' CSS:
+<br/>
+animation-name: stretchDown;
+<br/>
+  animation-duration: 2s;
+  <br/>
+  animation-iteration-count: infinite;
 `
 
 /*
