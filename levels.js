@@ -79,8 +79,7 @@ Use the color property to set the hue of the number to the circle's complementar
 <b>Complementary Colors:</b> two colors opposite of each other on the color wheel. For example, red and green are complementary.
 <br /><br />
 <b>Analogous Colors:</b> colors next to each other on the color wheel. For example, red and orange are analogous, as are red and purple.
-<br /><br />
-<b>Hint:</b> `
+`
 
 /*
     --------
