@@ -129,6 +129,8 @@ function checkCircles() {
         index = i + 1;
         circle = document.getElementById("color" + index)
 
+        circle.classList.remove('incorrect')
+
         if (!circle)
             continue;
 
@@ -142,10 +144,14 @@ function checkCircles() {
         if (currLevel == 1) {
             if (background != CORRECT_COLORS[i]) {
                 complete = false;
+
+                circle.classList.add('incorrect')
             }
         } else if (currLevel == 2) {
             if (text != CORRECT_COLORS2[i]) {
                 complete = false;
+
+                circle.classList.add('incorrect')
             }
         }
     }

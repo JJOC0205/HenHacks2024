@@ -26,6 +26,11 @@
   border: solid 4pt black !important;
 }
 
+.circle.incorrect {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+
 #confetti {
   position: absolute;
 }
@@ -34,6 +39,8 @@
   height: 56vh !important;
   border-radius: 0.25rem !important;
 }
+
+
 
 #color7 {
 }
