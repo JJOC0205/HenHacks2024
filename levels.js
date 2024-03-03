@@ -42,6 +42,9 @@ colors on the color wheel are made from.
 <br /><br />
 <b>Secondary Colors:</b> Orange, Green, and Violet (Purple) are made by mixing two primary colors together.
 <br /><br />
+<b>Tertiary Colors:</b> Red-Orange, Green-Yellow, etc. are mixed from primary and secondary colors.
+Click on two colors to see their combination in the center circle. Click again to deselect.
+<br /><br />
 <b>Hint:</b> Go clockwise in ROYGBV order!`
 
 /*
