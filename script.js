@@ -18,7 +18,7 @@ function updateCSS(input) {
 // Generate the circles
 function loadCircles() {
     const container = document.getElementById('colors');
-    const radius = 150;
+    const radius = 190;
     const angleIncrement = 360 / CIRCLE_COUNT;
 
     for (let i = 0; i < CIRCLE_COUNT; i++) {
@@ -37,11 +37,11 @@ let selectedDivs = [];
 
 function toggleSelection(divId) {
     const index = selectedDivs.indexOf(divId);
-    if (index === -1){
-        if(selectedDivs.length < 2){
+    if (index === -1) {
+        if (selectedDivs.length < 2) {
             selectedDivs.push(divId);
         }
-        if (selectedDivs.length === 2){
+        if (selectedDivs.length === 2) {
             colorMixer(window.getComputedStyle(document.getElementById(selectedDivs[0])).backgroundColor, window.getComputedStyle(document.getElementById(selectedDivs[1])).backgroundColor)
         }
     }
@@ -49,53 +49,65 @@ function toggleSelection(divId) {
         selectedDivs.splice(index, 1)
         color7.style.backgroundColor = "gray";
     }
+
+    for (let i = 0; i < CIRCLE_COUNT; i++) {
+        let index = i + 1;
+        circle = 'color' + index
+        div = document.getElementById(circle);
+        if (selectedDivs.includes(circle)) {
+            div.classList.add('selected')
+        } else {
+            div.classList.remove('selected')
+        }
+
+    }
 }
 
-function colorMixer(color1, color2){
+function colorMixer(color1, color2) {
     const color7 = document.getElementById("color7")
-    if ((color1.toString().localeCompare("rgb(255, 0, 0)") === 0 || color1.toString().localeCompare("rgb(255, 165, 0)") === 0) && (color2.toString().localeCompare("rgb(255, 0, 0)") === 0 || color2.toString().localeCompare("rgb(255, 165, 0)") === 0)){
+    if ((color1.toString().localeCompare("rgb(255, 0, 0)") === 0 || color1.toString().localeCompare("rgb(255, 165, 0)") === 0) && (color2.toString().localeCompare("rgb(255, 0, 0)") === 0 || color2.toString().localeCompare("rgb(255, 165, 0)") === 0)) {
         color7.style.backgroundColor = "orangered";
     }
-    else if ((color1.toString().localeCompare("rgb(255, 0, 0)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(255, 0, 0)") === 0 || color2.toString().localeCompare("rgb(255, 255, 0)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(255, 0, 0)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(255, 0, 0)") === 0 || color2.toString().localeCompare("rgb(255, 255, 0)") === 0)) {
         color7.style.backgroundColor = "orange";
     }
-    else if ((color1.toString().localeCompare("rgb(255, 0, 0)") === 0 || color1.toString().localeCompare("rgb(0, 128, 0)") === 0) && (color2.toString().localeCompare("rgb(255, 0, 0)") === 0 || color2.toString().localeCompare("rgb(0, 128, 0)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(255, 0, 0)") === 0 || color1.toString().localeCompare("rgb(0, 128, 0)") === 0) && (color2.toString().localeCompare("rgb(255, 0, 0)") === 0 || color2.toString().localeCompare("rgb(0, 128, 0)") === 0)) {
         color7.style.backgroundColor = "saddlebrown";
     }
-    else if ((color1.toString().localeCompare("rgb(255, 0, 0)") === 0 || color1.toString().localeCompare("rgb(0, 0, 255)") === 0) && (color2.toString().localeCompare("rgb(255, 0, 0)") === 0 || color2.toString().localeCompare("rgb(0, 0, 255)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(255, 0, 0)") === 0 || color1.toString().localeCompare("rgb(0, 0, 255)") === 0) && (color2.toString().localeCompare("rgb(255, 0, 0)") === 0 || color2.toString().localeCompare("rgb(0, 0, 255)") === 0)) {
         color7.style.backgroundColor = "purple";
     }
-    else if ((color1.toString().localeCompare("rgb(255, 0, 0)") === 0 || color1.toString().localeCompare("rgb(128, 0, 128)") === 0) && (color2.toString().localeCompare("rgb(255, 0, 0)") === 0 || color2.toString().localeCompare("rgb(128, 0, 128)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(255, 0, 0)") === 0 || color1.toString().localeCompare("rgb(128, 0, 128)") === 0) && (color2.toString().localeCompare("rgb(255, 0, 0)") === 0 || color2.toString().localeCompare("rgb(128, 0, 128)") === 0)) {
         color7.style.backgroundColor = "mediumvioletred";
     }
-    else if ((color1.toString().localeCompare("rgb(255, 255, 0)") === 0 || color1.toString().localeCompare("rgb(255, 165, 0)") === 0) && (color2.toString().localeCompare("rgb(255, 255, 0)") === 0 || color2.toString().localeCompare("rgb(255, 165, 0)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(255, 255, 0)") === 0 || color1.toString().localeCompare("rgb(255, 165, 0)") === 0) && (color2.toString().localeCompare("rgb(255, 255, 0)") === 0 || color2.toString().localeCompare("rgb(255, 165, 0)") === 0)) {
         color7.style.backgroundColor = "gold";
     }
-    else if ((color1.toString().localeCompare("rgb(0, 128, 0)") === 0 || color1.toString().localeCompare("rgb(255, 165, 0)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(255, 165, 0)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(0, 128, 0)") === 0 || color1.toString().localeCompare("rgb(255, 165, 0)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(255, 165, 0)") === 0)) {
         color7.style.backgroundColor = "saddlebrown";
     }
-    else if ((color1.toString().localeCompare("rgb(0, 0, 255)") === 0 || color1.toString().localeCompare("rgb(255, 165, 0)") === 0) && (color2.toString().localeCompare("rgb(0, 0, 255)") === 0 || color2.toString().localeCompare("rgb(255, 165, 0)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(0, 0, 255)") === 0 || color1.toString().localeCompare("rgb(255, 165, 0)") === 0) && (color2.toString().localeCompare("rgb(0, 0, 255)") === 0 || color2.toString().localeCompare("rgb(255, 165, 0)") === 0)) {
         color7.style.backgroundColor = "brown";
     }
-    else if ((color1.toString().localeCompare("rgb(128, 0, 128)") === 0 || color1.toString().localeCompare("rgb(255, 165, 0)") === 0) && (color2.toString().localeCompare("rgb(128, 0, 128)") === 0 || color2.toString().localeCompare("rgb(255, 165, 0)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(128, 0, 128)") === 0 || color1.toString().localeCompare("rgb(255, 165, 0)") === 0) && (color2.toString().localeCompare("rgb(128, 0, 128)") === 0 || color2.toString().localeCompare("rgb(255, 165, 0)") === 0)) {
         color7.style.backgroundColor = "brown";
     }
-    else if ((color1.toString().localeCompare("rgb(0, 0, 255)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(0, 0, 255)") === 0 || color2.toString().localeCompare("rgb(255, 255, 0)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(0, 0, 255)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(0, 0, 255)") === 0 || color2.toString().localeCompare("rgb(255, 255, 0)") === 0)) {
         color7.style.backgroundColor = "green";
     }
-    else if ((color1.toString().localeCompare("rgb(128, 0, 128)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(128, 0, 128)") === 0 || color2.toString().localeCompare("rgb(255, 255, 0)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(128, 0, 128)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(128, 0, 128)") === 0 || color2.toString().localeCompare("rgb(255, 255, 0)") === 0)) {
         color7.style.backgroundColor = "brown";
     }
-    else if ((color1.toString().localeCompare("rgb(0, 128, 0)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(255, 255, 0)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(0, 128, 0)") === 0 || color1.toString().localeCompare("rgb(255, 255, 0)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(255, 255, 0)") === 0)) {
         color7.style.backgroundColor = "yellowgreen";
     }
-    else if ((color1.toString().localeCompare("rgb(0, 128 0)") === 0 || color1.toString().localeCompare("rgb(0, 0, 255)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(0, 0, 255)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(0, 128 0)") === 0 || color1.toString().localeCompare("rgb(0, 0, 255)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(0, 0, 255)") === 0)) {
         color7.style.backgroundColor = "teal";
     }
-    else if ((color1.toString().localeCompare("rgb(0, 128, 0)") === 0 || color1.toString().localeCompare("rgb(128, 0, 128)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(128, 0, 128)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(0, 128, 0)") === 0 || color1.toString().localeCompare("rgb(128, 0, 128)") === 0) && (color2.toString().localeCompare("rgb(0, 128, 0)") === 0 || color2.toString().localeCompare("rgb(128, 0, 128)") === 0)) {
         color7.style.backgroundColor = "silver";
     }
-    else if ((color1.toString().localeCompare("rgb(0, 0, 255)") === 0 || color1.toString().localeCompare("rgb(128, 0, 128)") === 0) && (color2.toString().localeCompare("rgb(0, 0, 255)") === 0 || color2.toString().localeCompare("rgb(128, 0, 128)") === 0)){
+    else if ((color1.toString().localeCompare("rgb(0, 0, 255)") === 0 || color1.toString().localeCompare("rgb(128, 0, 128)") === 0) && (color2.toString().localeCompare("rgb(0, 0, 255)") === 0 || color2.toString().localeCompare("rgb(128, 0, 128)") === 0)) {
         color7.style.backgroundColor = "blueviolet";
     }
 }
@@ -117,6 +129,8 @@ function checkCircles() {
         index = i + 1;
         circle = document.getElementById("color" + index)
 
+        circle.classList.remove('incorrect')
+
         if (!circle)
             continue;
 
@@ -127,21 +141,36 @@ function checkCircles() {
         text = window.getComputedStyle(circle).color;
         text = text.toString();
         console.log(window.location.toString())
-        if (currLevel == 1){
+        if (currLevel == 1) {
             if (background != CORRECT_COLORS[i]) {
                 complete = false;
+
+                circle.classList.add('incorrect')
             }
-        } else if (currLevel == 2){
+        } else if (currLevel == 2) {
             if (text != CORRECT_COLORS2[i]) {
                 complete = false;
+
+                circle.classList.add('incorrect')
             }
         }
     }
 
     if (complete && currLevel != 3) {
-        alert("You got it!")
-    } 
-    else if(currLevel == 3){
+
+        let confetti = new Confetti('colors');
+
+        // Edit given parameters
+        confetti.setCount(75);
+        confetti.setSize(1);
+        confetti.setPower(25);
+        confetti.setFade(true);
+        confetti.destroyTarget(false);
+
+        alert("You got it! Now click any circle for a fun surprise :)")
+
+    }
+    else if (currLevel == 3) {
         alert("Sandbox mode, no incorrect answers here!");
     }
     else {
