@@ -158,10 +158,10 @@ function checkCircles() {
         confetti.setCount(75);
         confetti.setSize(1);
         confetti.setPower(25);
-        confetti.setFade(false);
+        confetti.setFade(true);
         confetti.destroyTarget(false);
 
-        alert("You got it! Now click the center circle for a fun surprise :)")
+        alert("You got it! Now click any circle for a fun surprise :)")
 
     }
     else if (currLevel == 3) {
