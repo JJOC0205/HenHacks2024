@@ -60,23 +60,6 @@ function checkCircles() {
     }
 }
 
-function loadCSSEditor() {
-    html = `#color1 {
-  background-color: red;
-}
-#color2 {
-  background-color:          
-}
-#color3 {
-}
-#color4 {
-}
-#color5 {
-}
-#color6 {
-}`
-    editor.setValue(html);
-}
 
 let editor = CodeMirror.fromTextArea(cssInput, {
     lineNumbers: false, // Display line numbers
@@ -91,7 +74,7 @@ editor.on('change', editor => {
 updateCSS(cssInput.value);
 loadCircles();
 
-window.onload = loadCSSEditor;
+window.onload = resetLevel(querystring('level'));
 
 
 
