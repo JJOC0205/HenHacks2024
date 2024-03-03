@@ -17,7 +17,7 @@ function updateCSS(input) {
 // Generate the circles
 function loadCircles() {
     const container = document.getElementById('colors');
-    const radius = 100;
+    const radius = 150;
     const angleIncrement = 360 / CIRCLE_COUNT;
 
     for (let i = 0; i < CIRCLE_COUNT; i++) {
