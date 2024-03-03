@@ -95,10 +95,8 @@ animation-name: stretchDown;
 LEVEL_THREE_TITLE = "Lesson 3 - Sandbox"
 
 LEVEL_THREE_CSS = `#color1 {
-  background-color: red;
 }
-#color2 {
-  background-color:          
+#color2 {       
 }
 #color3 {
 }
