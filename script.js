@@ -60,18 +60,21 @@ function checkCircles() {
     }
 }
 
-var editor = CodeMirror.fromTextArea(cssInput, {
+
+let editor = CodeMirror.fromTextArea(cssInput, {
     lineNumbers: false, // Display line numbers
     mode: "css", // Set the syntax highlighting mode to CSS
-}).on('change', editor => {
+});
+editor.on('change', editor => {
     updateCSS(editor.getValue());
 });
 
 
-// Event listener for changes in CSS input
-cssInput.addEventListener('input', updateCSS);
-
 // Initial update and load
 updateCSS(cssInput.value);
 loadCircles();
+
+window.onload = resetLevel(querystring('level'));
+
+
 

@@ -56,6 +56,7 @@
 
         <div class="h-100 bg-light rounded-3 mt-2">
           <h4><b>1. Simple Color Wheel</b></h4>
+
           <p class="" style="height: 25vh;overflow: scroll;">Welcome to Color Guru! For this first level, we are going to fill a color wheel using CSS. The first color, red, is done for you. 
           <br/><br/>
           <b>Primary Colors:</b> Red, Yellow, and Blue are the first group of colors by which all other
@@ -67,22 +68,7 @@
           </p>
           <hr>
 
-          <textarea id="cssInput" class="w-100" style="height: 70vh;" placeholder="Enter CSS here...">#color1 {
-  background-color: red;
-}
-#color2 {
-  background-color:          
-}
-#color3 {
-}
-#color4 {
-}
-#color5 {
-}
-#color6 {
-}
-
-          </textarea>
+          <textarea id="cssInput" class="w-100" style="height: 70vh;"></textarea>
         </div>
 
 
@@ -96,7 +82,7 @@
         <div class="d-flex justify-content-between mt-2">
           <h4><b>Preview</b></h4>
           <div>
-            <button type="button" class="btn btn-secondary text-right float-end">
+            <button type="button" onclick="location.reload();" class="btn btn-secondary text-right float-end">
               Reset
             </button>
             <button type="button" class="btn btn-primary text-right float-end">
@@ -113,7 +99,9 @@
 
       <style id="liveCSS"></style>
 
+      <script src="levels.js"></script>
       <script src="script.js"></script>
+
 
     </div>
 
