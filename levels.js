@@ -17,7 +17,7 @@ const desc = document.getElementById('description');
     LEVEL ONE
 */
 
-LEVEL_ONE_TITLE = 'Level 1 - Color Wheel'
+LEVEL_ONE_TITLE = 'Lesson 1 - Color Wheel'
 
 LEVEL_ONE_CSS = `#color1 {
   background-color: red;
@@ -34,7 +34,7 @@ LEVEL_ONE_CSS = `#color1 {
 #color6 {
 }`
 
-LEVEL_ONE_DESC = `Welcome to Color Guru! For this first level, we are
+LEVEL_ONE_DESC = `Welcome to Color Cascade! For this first level, we are
 going to fill a color wheel using CSS. The first color, red, is done for you. <b>Hint:</b> Go clockwise in ROYGBV order!
 <br /><br />
 <b>Primary Colors:</b> Red, Yellow, and Blue are the first group of colors by which all other
@@ -50,7 +50,7 @@ Click on two colors to see their combination in the center circle. Click again t
     LEVEL TWO
 */
 
-LEVEL_TWO_TITLE = 'Level 2 - Complementary Colors'
+LEVEL_TWO_TITLE = 'Lesson 2 - Complementary Colors'
 
 LEVEL_TWO_CSS = `#color1 {
   background-color: red;
@@ -89,8 +89,16 @@ animation-name: stretchDown;
 `
 
 /*
-    --------
+    LEVEL THREE
 */
+
+LEVEL_THREE_TITLE = "Lesson 3 - Sandbox"
+
+LEVEL_THREE_CSS = ""
+
+LEVEL_THREE_DESC = `You've worked hard, now it's time to use your new skills to play however you'd like! 
+To learn more about all the amazing things you can do with CSS, check out our help tab for educational resources.
+Happy coding!`
 
 function resetLevel(id) {
     console.log(id)
@@ -110,6 +118,10 @@ function resetLevel(id) {
             description = LEVEL_TWO_DESC
             title = LEVEL_TWO_TITLE
             break;
+        case "3":
+          editorText = LEVEL_THREE_CSS
+          description = LEVEL_THREE_DESC
+          title = LEVEL_THREE_TITLE
         default:
             setLevel(1)
 
