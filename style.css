@@ -2,7 +2,7 @@
     position: relative;
     width: 200px;
     height: 200px;
-    left: 21vw;
+    left: 22vw;
     top: 200px;
 }
 
@@ -16,5 +16,10 @@
     font-weight: bold;
     font-size: 5vh;
     vertical-align: right;
+}
+
+.CodeMirror {
+    height: 56vh !important;
+    border-radius: .25rem !important;
 }
 
