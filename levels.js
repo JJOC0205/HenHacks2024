@@ -24,6 +24,30 @@ LEVEL_ONE = `#color1 {
 #color6 {
 }`
 
+LEVEL_TWO = `#color1 {
+  background-color: red;
+}
+    
+#color2 {
+  background-color: orange;
+}
+    
+#color3 {
+  background-color: yellow;
+}
+    
+#color4 {
+  background-color: green;
+}
+    
+#color5 {
+  background-color: blue;
+}
+    
+#color6 {
+  background-color: purple;
+}`
+
 function resetLevel(id) {
     console.log(id)
     editorText = `Error, loading first page...`
@@ -33,7 +57,7 @@ function resetLevel(id) {
             editorText = LEVEL_ONE
             break;
         case "2":
-            editorText = 'asdasd'
+            editorText = LEVEL_TWO
             break;
         default:
             setLevel(1)
