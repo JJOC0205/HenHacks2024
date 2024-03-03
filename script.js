@@ -174,7 +174,7 @@ function checkCircles() {
         alert("Sandbox mode, no incorrect answers here!");
     }
     else {
-        alert("So close, try again!")
+        alert("So close, try again! Check your color wheel for underlined numbers - those colors are incorrect!")
     }
 }
 

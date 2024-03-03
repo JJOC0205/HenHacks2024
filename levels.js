@@ -35,15 +35,16 @@ LEVEL_ONE_CSS = `#color1 {
 }`
 
 LEVEL_ONE_DESC = `Welcome to Color Cascade! For this first level, we are
-going to fill a color wheel using CSS. The first color, red, is done for you. <b>Hint:</b> Go clockwise in ROYGBV order!
+going to fill a color wheel using CSS. Fill out the background-color attribute inside each color id. The first color, red, is done for you. <b>Hint:</b> Go clockwise in ROYGBV order!
 <br /><br />
+Click on two completed colors to see their combination in the center circle. The selected colors are outlined black. Click again to deselect.
+<br/><br/>
 <b>Primary Colors:</b> Red, Yellow, and Blue are the first group of colors by which all other
 colors on the color wheel are made from.
 <br /><br />
 <b>Secondary Colors:</b> Orange, Green, and Violet (for our purposes, use Purple) are made by mixing two primary colors together.
 <br /><br />
 <b>Tertiary Colors:</b> Red-Orange, Green-Yellow, etc. are mixed from primary and secondary colors.
-Click on two colors to see their combination in the center circle. Click again to deselect.
 `
 
 /*
@@ -58,6 +59,7 @@ LEVEL_TWO_CSS = `#color1 {
 }
 #color2 {
   background-color: orange;
+  color:
 }
 #color3 {
   background-color: yellow;
