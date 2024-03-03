@@ -8,8 +8,8 @@ const CORRECT_COLORS = ["rgb(255, 0, 0)", "rgb(255, 165, 0)", "rgb(255, 255, 0)"
 
 
 // Function to update CSS
-function updateCSS() {
-    css = '#colors {' + cssInput.value + '}';
+function updateCSS(input) {
+    css = '#colors {' + input + '}';
     liveCSS.textContent = css
 }
 
@@ -59,6 +59,14 @@ function checkCircles() {
         alert("So close, try again!")
     }
 }
+
+var editor = CodeMirror.fromTextArea(cssInput, {
+    lineNumbers: false, // Display line numbers
+    mode: "css", // Set the syntax highlighting mode to CSS
+}).on('change', editor => {
+    updateCSS(editor.getValue());
+});
+
 
 // Event listener for changes in CSS input
 cssInput.addEventListener('input', updateCSS);
